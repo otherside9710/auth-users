@@ -1,0 +1,19 @@
+services:
+  Repository.Login.Credential:
+    class: ../../../context/shared/infrastructure/repositories/CredentialsRepository
+    arguments: []
+
+  UseCase.Login.GetUserByEmail:
+    class: ../../../context/shared/application/uses_cases/find/GetUserByEmail
+    arguments:
+      - '@Repository.Login.Credential'
+
+  Service.Login:
+    class: ../../../context/login/infrastructure/services/LoginService
+    arguments:
+      - '@UseCase.Login.GetUserByEmail'
+
+  Controller.Login:
+    class: ../../controllers/login/find/LoginController
+    arguments:
+      - '@Service.Login'

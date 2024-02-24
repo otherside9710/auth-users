@@ -1,0 +1,30 @@
+services:
+  Repository.User:
+    class: ../../../context/users/infrastructure/repositories/UserRepository
+    arguments: []
+
+  UseCase.User.Create:
+    class: ../../../context/users/application/uses_cases/create/CreateUser
+    arguments:
+      - '@Repository.User'
+
+  UseCase.User.GetAll:
+    class: ../../../context/users/application/uses_cases/find/GetAllUsers
+    arguments:
+      - '@Repository.User'    
+  
+  Service.User:
+    class: ../../../context/users/infrastructure/services/UserService
+    arguments:
+      - '@UseCase.User.Create'
+      - '@UseCase.User.GetAll'
+
+  Controller.User.Create:
+    class: ../../controllers/users/create/CreateUserController
+    arguments:
+      - '@Service.User'
+      
+  Controller.User.GetAll:
+    class: ../../controllers/users/find/GetAllUsersController
+    arguments:
+      - '@Service.User'
