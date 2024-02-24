@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+#Re-check eslint for all files
+npm run eslint
+npm run check-types
