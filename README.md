@@ -18,6 +18,7 @@ Welcome to the Code Challenge! Here you will find the code made by Julio Sarmien
   - [Use Cases](#use-cases)
 - [Pattern](#pattern)
   - [Bounded Context](#bounded-context)
+- [Note](#note)
 
 ## Getting started 
 
@@ -171,3 +172,8 @@ A use case can call objects in the same layer (such as data repositories) or in 
 > Bounded Context is a central pattern in Domain-Driven Design. It is the focus of DDD's strategic design section which is all about dealing with large models and teams. DDD deals with large models by dividing them into different Bounded Contexts and being explicit about their interrelationships.
 
 ![Example](https://martinfowler.com/bliki/images/boundedContext/sketch.png)
+
+
+### Note
+
+> The response from the /login endpoint returns a token, which must be added to the /users endpoints in a header called "authorization", to be able to access the API resources, otherwise it will return unauthorized messages.
