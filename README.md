@@ -21,7 +21,7 @@ Welcome to the Code Challenge! Here you will find the code made by Julio Sarmien
 
 ## Getting started 
 
-Environment (.env file):
+1. Environment, create the .env file at the root of the project:
 ```
 PORT=3001
 NODE_ENV=dev
@@ -37,12 +37,18 @@ DB_NAME=users
 EXTERNAL_CRUD_API=https://jsonplaceholder.typicode.com
 ```
 
-Please run docker container (PostgreSQL)
+2. Install all dependencies (run in your terminal):
+
+``` 
+npm i 
+```
+
+3. Docker container (PostgreSQL) (run in your terminal):
 ```
 docker-compose -f docker-compose.yml up -d
 ```
 
-How to run app:
+4. How to run app:
 ```
 run: npm run dev
 ```
