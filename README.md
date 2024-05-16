@@ -39,25 +39,15 @@ DB_NAME=users
 EXTERNAL_CRUD_API=https://jsonplaceholder.typicode.com
 ```
 
-2. Install all dependencies (run in your terminal):
+2. How to run app - (Docker container):
 
-``` 
-npm i 
-```
+run in your terminal:
 
-3. Docker container (PostgreSQL) (run in your terminal):
 ```
 docker-compose -f docker-compose.yml up -d
 ```
 
-4. How to run app:
-```
-run: npm run dev
-```
-
-```
-build: npm run prod
-```
+Once the docker command finishes executing, you can use the endpoints.
 
 ## HTTP Request's
 
