@@ -24,17 +24,18 @@ Welcome to the Code Challenge! Here you will find the code made by Julio Sarmien
 
 1. Environment, create the .env file at the root of the project:
 ```
-PORT=3001
+#APP
+PORT=3000
 NODE_ENV=dev
 
-#DB
-DB_HOST=localhost
+#DATABASE
+DB_HOST=postgres
 DB_PORT=5432
 DB_USERNAME=postgres
 DB_PASSWORD=postgres
 DB_NAME=users
 
-#Exteral CRUD API
+#API
 EXTERNAL_CRUD_API=https://jsonplaceholder.typicode.com
 ```
 
