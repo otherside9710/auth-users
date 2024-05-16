@@ -57,7 +57,7 @@ CURL's for using endpoints.
 ## Login
 ```
 curl --request POST \
-  --url http://YOUR_HOST_HERE:3001/login \
+  --url http://YOUR_HOST_HERE:3000/login \
   --header 'Content-Type: application/json' \
   --data '{
 	"email": "user@mail.com",
@@ -67,7 +67,7 @@ curl --request POST \
 ## Create User
 ```
 curl --request POST \
-  --url http://YOUR_HOST_HERE:3001/users \
+  --url http://YOUR_HOST_HERE:3000/users \
   --header 'Content-Type: application/json' \
   --header 'authorization: LOGIN_TOKEN_HERE' \
   --data '{
@@ -80,7 +80,7 @@ curl --request POST \
 ## Get All Users
 ```
 curl --request GET \
-  --url http://YOUR_HOST_HERE:3001/users \
+  --url http://YOUR_HOST_HERE:3000/users \
   --header 'authorization: LOGIN_TOKEN_HERE'
 ```
 
