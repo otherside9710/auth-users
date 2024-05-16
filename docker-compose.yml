@@ -9,3 +9,10 @@ services:
       - POSTGRES_PASSWORD=postgres
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  ms-auth-user: 
+    build: .
+    container_name: ms-auth-user
+    depends_on:
+      - postgres
+    ports:
+      - "3000:3000"
